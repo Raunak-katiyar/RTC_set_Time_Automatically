@@ -1,8 +1,6 @@
 #include <Wire.h>
 #include <RTClib.h>
-//Aniket Sahu
 
-//hello from raunak
 RTC_DS3231 rtc;
 
 void setup() {
