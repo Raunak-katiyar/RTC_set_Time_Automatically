@@ -18,6 +18,27 @@ void setup() {
   rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); 
 
   Serial.println("RTC time set to compile time.");
+  DateTime now = rtc.now();
+  
 }
 
-void loop() {}
+void printTime() {
+  DateTime now = rtc.now();
+
+  Serial.print(now.hour());
+  Serial.print(':');
+  Serial.print(now.minute());
+  Serial.print(':');
+  Serial.print(now.second());
+  Serial.print("  ");
+  Serial.print(now.day());
+  Serial.print('/');
+  Serial.print(now.month());
+  Serial.print('/');
+  Serial.println(now.year());
+}
+
+void loop() {
+  printTime();
+  delay(10000);
+}
