@@ -8,7 +8,7 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
   
-  Wire.begin(21, 22);  // Your I2C pins
+  Wire.begin(21, 22);  // Your I2C pins scl sda
   
   if (!rtc.begin()) {
     Serial.println("RTC not found!");
